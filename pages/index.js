@@ -10,7 +10,7 @@ export default function Chatbot() {
 
   const sendMessage = () => {
     if (!input.trim()) return;
-    setMessages([...messages, { role: "user", text: input }]);
+    setMessages((prev) => [...prev, { role: "user", text: input }]);
     setTimeout(() => {
       setMessages((prev) => [
         ...prev,
